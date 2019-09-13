@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "fake3d": [
+        "dist/fake3d"
+      ],
+      "fake3d/*": [
+        "dist/fake3d/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

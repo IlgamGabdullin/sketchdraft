@@ -124,6 +124,41 @@
           }
         }
       }
+    },
+    "fake3d": {
+      "projectType": "library",
+      "root": "projects/fake3d",
+      "sourceRoot": "projects/fake3d/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/fake3d/tsconfig.lib.json",
+            "project": "projects/fake3d/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/fake3d/src/test.ts",
+            "tsConfig": "projects/fake3d/tsconfig.spec.json",
+            "karmaConfig": "projects/fake3d/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/fake3d/tsconfig.lib.json",
+              "projects/fake3d/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "fake3dtest"
 }

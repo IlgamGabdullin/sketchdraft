@@ -2,13 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { Fake3dModule } from 'projects/fake3d/src/public-api';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    Fake3dModule
   ],
   providers: [],
   bootstrap: [AppComponent]
